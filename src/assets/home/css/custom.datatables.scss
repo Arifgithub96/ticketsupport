@@ -1,0 +1,169 @@
+
+$black: #000000;
+$grey: #808080;
+$red: #ff0000;
+$blue: #0000ff;
+$green: #008000;
+$purple: #800080;
+$yellow: #ffff00;
+$orange: #ffa500;
+$white: #ffffff;
+
+
+
+$height: 56px;
+
+$font11: 11px;
+// Font size 11px and less
+
+$font15: 15px;
+// Font size 15px and less to 11px
+
+$font16: 16px;
+// Font size 16px and more to 25px
+$font25: 25px;
+
+$fontweight6: 600;
+$fontweight7: 700;
+$padding10-0: 10px 0px;
+$width250: 250px;
+
+
+/* ****************************Datatable Wrapper Pagination Starts Here************************** */
+
+.dataTables_wrapper {
+  table.dataTable.no-footer {
+    border-bottom: 1px solid darken($white,20%);
+  }
+  .dataTables_length {
+    margin: 20px 20px;
+    label {
+      font-size: $font15 - 1;
+      font-weight: $fontweight6;
+      select {
+        border-radius: 5px;
+        border: 1px solid darken($white,20%);
+        font-size: $font15 - 2;
+        font-weight: $fontweight6;
+      }
+    }
+  }
+  .dataTables_filter {
+    margin: 20px 20px;
+    label {
+      font-size: $font15 - 1;
+      font-weight: $fontweight6;
+      input {
+        font-size: $font15 - 1;
+        font-weight: $fontweight6;
+        border-radius: 10px;
+      }
+    }
+  }
+  .dataTables_paginate {
+    margin: 25px 40px 40px 40px;
+    a.previous {
+      border-radius: 20px !important;
+      font-weight: $fontweight6 !important;
+      background: transparent !important;
+      &:hover {
+        background: lighten($blue,10%) !important;
+        color: darken($white,6%) !important;
+      }
+    }
+    a {
+      color: lighten($white,3%) !important;
+      background: transparent;
+      border-radius: 50% !important;
+      border: 1px solid darken($white,20%) !important;
+      padding: 5px 10px;
+      font-size: $font11;
+      &:hover {
+        background: lighten($blue,10%) !important;
+      }
+    }
+    .paginate_button.disabled {
+      background: transparent;
+      color: darken($white,20%) !important;
+    }
+    span {
+      a.paginate_button.current {
+        background: darken($blue,15%);
+        color: darken($white,6%) !important;
+      }
+      a {
+        border-radius: 50%;
+      }
+    }
+    a.next {
+      border-radius: 20px !important;
+      font-weight: $fontweight6;
+    }
+  }
+  .dataTables_info {
+    margin: 25px 40px 40px 40px;
+    padding: 5px 0 0 0;
+  }
+}
+
+/* ****************************Datatable Wrapper Pagination Ends Here************************** */
+
+
+
+/* *********************Datatable Wrapper Pagination Media Queries Ends Here******************** */
+
+@media (max-width: 992px) {
+  .dataTables_wrapper {
+    .dataTables_length {
+      label {
+        font-size: $font11;
+        select {
+          font-size: $font11 - 1;
+        }
+      }
+    }
+    .dataTables_filter {
+      label {
+        font-size: $font11;
+        input {
+          font-size: $font11;
+          padding: 0px;
+        }
+      }
+    }
+    .dataTables_paginate {
+      margin: 5px 40px 20px 40px;
+      a {
+        padding: 2px 6px !important;
+        font-size: $font11 - 1;
+      }
+    }
+    .dataTables_info {
+      margin: 5px 40px 20px 40px;
+      font-size: $font11;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .dataTables_wrapper {
+    .dataTables_length {
+      margin: 10px 20px;
+    }
+    .dataTables_filter {
+      margin: 10px 20px;
+      label {
+        input {
+          padding: 0px;
+        }
+      }
+    }
+    .dataTables_paginate {
+      margin: 0px 40px 20px 40px;
+    }
+    .dataTables_info {
+      margin: 0px 40px 10px 40px;
+    }
+  }
+}
+
+/* *********************Datatable Wrapper Pagination Media Queries Ends Here********************* */
